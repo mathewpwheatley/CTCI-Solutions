@@ -11,7 +11,7 @@
 # - Would have likely been cleaner to use an array of lenght 128 (assuming ASCII characters) with 0 as a default value
 # - Could also have sorted both arrays and directly compared them
 
-def isPermutation(string1, string2)
+def is_permutation(string1, string2)
     return false if (string1.length != string2.length)
     dictionary = {}
     # Fill dictionary based on first string
@@ -35,7 +35,7 @@ def isPermutation(string1, string2)
 end
 
 # Test Cases:
-puts isPermutation("ASD","SDA") # True
-puts isPermutation("AD ","SDA") # False
-puts isPermutation("ASD ","S DA") # True
-puts isPermutation("ASD ","SdA") # flase
+puts is_permutation("ASD","SDA") # True
+puts is_permutation("AD ","SDA") # False
+puts is_permutation("ASD ","S DA") # True
+puts is_permutation("ASD ","SdA") # flase

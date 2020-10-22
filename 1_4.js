@@ -5,14 +5,14 @@
 // - Not limited to real words
 // - Ignore casing and non-letter characters
 
-// Time Complexity:
-// Space Complexity:
+// Time Complexity: N
+// Space Complexity: 1 (characters is always has a length of 128)
 
 // Alternate Approaches:
-// - Could have used a hash instead
+// - Could have used a hash instead for characters
 
 function palindromePermutation(input) {
-  // Create booleans for each character
+  // Create counter for each 128 characters, start counter at 0
   characters = new Array(128).fill(0)
   // Remove all whitespace and lowercase input
   input = input.replace(/\s/g, '').toLowerCase()
