@@ -24,7 +24,7 @@ def k_to_last(head, k)
     # Reset currNode
     currNode = head
     # Step through list until k node is found
-    for i in 0..k_index
+    for i in 0...k_index
         currNode = currNode.next
     end
     # Return result
@@ -33,3 +33,7 @@ end
 
 # Test Cases:
 # Not currently tested, verified against solutions in CTCI
+require './Utilities/LinkedList.rb'
+
+test_case_1 = build([1,2,3,4,5,6,7,9])
+puts (k_to_last(test_case_1,3).data)

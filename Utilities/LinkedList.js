@@ -1,35 +1,20 @@
-class SinglyLinkedListNode {
-  constructor(data, next = null) {
+class Node {
+  constructor(data) {
     this.data = data
-    this.next = next
+    this.next = null
   }
 }
 
-function buildSinglyLinkedList(dataArray) {
-  const head = new SinglyLinkedListNode(dataArray[0])
+function build(dataArray) {
+  const head = new Node(dataArray[0])
   let prevNode = head
   for (let i = 1; i < dataArray.length; i++) {
-    const currNode = new SinglyLinkedListNode(dataArray[i])
+    // Create node
+    const currNode = new Node(dataArray[i])
+    // Set previous node next property
     prevNode.next = currNode
-  }
-  return head
-}
-
-class DoublyLinkedListNode {
-  constructor(data, next = null, previous = null) {
-    this.data = data
-    this.next = next
-    this.previous = previous
-  }
-}
-
-function buildDoublyLinkedList(dataArray) {
-  const head = new DoublyLinkedListNode(dataArray[0])
-  let prevNode = head
-  for (let i = 1; i < dataArray.length; i++) {
-    const currNode = new DoublyLinkedListNode(dataArray[i])
-    currNode.previous = prevNode
-    prevNode.next = currNode
+    // Step previous node
+    prevNode = currNode
   }
   return head
 }
