@@ -10,7 +10,7 @@
 # Space Complexity: 1 (Just pointers and flags)
 
 # Alternate Approaches:
-# - Could have used a hash instead for characters
+# - Could have seperated replace, insert, or delete into another function for more readability
 
 def one_away(string_1, string_2)
     # Check that string lengths are a max of on away
