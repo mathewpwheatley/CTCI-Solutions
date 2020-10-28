@@ -7,8 +7,8 @@
 # - Each list number is stored in reverese order
 # - Each linked list can have a different length
 
-# Time Complexity: N + M 
-# Space Complexity: 1
+# Time Complexity: N + M + K (N = first list length, M = second list length, K output list length)
+# Space Complexity: K?
 
 # Alternate Approaches:
 
