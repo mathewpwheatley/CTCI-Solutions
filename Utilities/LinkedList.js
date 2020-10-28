@@ -4,8 +4,9 @@ class Node {
     this.next = null
   }
 }
+exports.Node = Node
 
-function build(dataArray) {
+export function build(dataArray) {
   const head = new Node(dataArray[0])
   let prevNode = head
   for (let i = 1; i < dataArray.length; i++) {
@@ -18,6 +19,7 @@ function build(dataArray) {
   }
   return head
 }
+exports.build = build
 
 function nthNode(head, n) {
   // Initialize current node to the head node
@@ -36,6 +38,7 @@ function nthNode(head, n) {
   // Return nth node
   return currNode
 }
+exports.currNode = currNode
 
 function editNode(head, n, newData) {
   // Get current  node via nth node function
@@ -51,6 +54,7 @@ function editNode(head, n, newData) {
     return null
   }
 }
+exports.editNode = editNode
 
 function addNode(head, n, data) {
   // Create new node
@@ -77,6 +81,7 @@ function addNode(head, n, data) {
     return head
   }
 }
+exports.addNode = addNode
 
 function deleteNode(head, n) {
   // Check edge case for deleting head node
@@ -97,3 +102,4 @@ function deleteNode(head, n) {
     return head
   }
 }
+exports.deleteNode = deleteNode
