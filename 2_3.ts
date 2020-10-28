@@ -6,11 +6,11 @@
 // - Does not have to be the exact middle node, just not first or last
 // - Can't perform operation if last node is passed
 
-// Time Complexity:
-// Space Complexity:
+// Time Complexity: 1
+// Space Complexity: 1
 
 // Alternate Approaches:
-// -
+// - N/A, very straight forward. Alternate approach would be available if it was a doubly linked list
 
 import { Node, build } from './Utilities/LinkedList'
 
