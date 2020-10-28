@@ -5,10 +5,11 @@
 // - data values are all integers
 // - Values equal to value are place after partition
 
-// Time Complexity:
-// Space Complexity:
+// Time Complexity: N
+// Space Complexity: N
 
 // Alternate Approaches:
+// - Several other approaches, see CTCI solutions
 
 import { Node, build } from './Utilities/LinkedList'
 
