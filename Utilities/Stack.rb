@@ -1,26 +1,22 @@
 class Stack
-    attr_accessor(:data, :top)
+    attr_accessor(:data)
     def initialize()
       @data = []
-      @top = nil
     end
 
     def push(value)
         self.data.push(value)
-        self.top = value
     end
 
     def pop()
-        value = self.data.pop()
-        self.top = self.data[-1]
-        return value
+        return self.data.pop()
     end
 
     def peek()
-        return self.top
+        return self.data[-1]
     end
 
     def is_empty()
-        self.top == nil ? return true : return false
+        self.peek() == nil ? return true : return false
     end
 end

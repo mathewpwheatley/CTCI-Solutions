@@ -1,26 +1,22 @@
 class Stack {
   constructor() {
     this.data = []
-    this.top = null
   }
 
   push(value) {
     this.data.push(value)
-    this.top = value
   }
 
   pop() {
-    const value = this.data.pop()
-    this.top = this.data[this.data.length - 1]
-    return value
+    return this.data.pop()
   }
 
   peek() {
-    return this.top
+    return this.data[this.data.length - 1]
   }
 
   isEmpty() {
-    if (this.top === null) {
+    if (this.peek() === null) {
       return true
     } else {
       return false
