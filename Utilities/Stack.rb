@@ -15,4 +15,12 @@ class Stack
         self.top = self.data[-1]
         return value
     end
+
+    def peek()
+        return self.top
+    end
+
+    def is_empty()
+        self.top == nil ? return true : return false
+    end
 end

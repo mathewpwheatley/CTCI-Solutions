@@ -1,4 +1,4 @@
-class Stack {
+class Queue {
   constructor() {
     this.data = []
     this.top = null
@@ -13,18 +13,6 @@ class Stack {
     const value = this.data.pop()
     this.top = this.data[this.data.length - 1]
     return value
-  }
-
-  peek() {
-    return this.top
-  }
-
-  isEmpty() {
-    if (this.top === null) {
-      return true
-    } else {
-      return false
-    }
   }
 }
 
