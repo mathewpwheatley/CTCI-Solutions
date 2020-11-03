@@ -1,5 +1,5 @@
 class Stack {
-  constructor(data) {
+  constructor() {
     this.data = []
     this.top = null
   }
