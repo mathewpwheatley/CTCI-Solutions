@@ -1,3 +1,5 @@
+# Should make a node class and use that for each data point instead of the array
+
 class Stack
     attr_accessor(:data)
     def initialize()
