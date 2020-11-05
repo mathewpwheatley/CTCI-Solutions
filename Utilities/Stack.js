@@ -1,20 +1,29 @@
-// Should make a node class and use that for each data point instead of the array
+class Node {
+  constructor(data, next = null) {
+    this.data = data
+    this.next = next
+  }
+}
 
 class Stack {
-  constructor() {
-    this.data = []
+  constructor(top = null) {
+    this.top = top
   }
 
-  push(value) {
-    this.data.push(value)
+  push(data) {
+    const currNode = new Node(data)
+    currNode.next = this.top
+    this.top = currNode
   }
 
   pop() {
-    return this.data.pop()
+    const currNode = this.top
+    this.top = currNode.next
+    return currNode
   }
 
   peek() {
-    return this.data[this.data.length - 1]
+    return this.top
   }
 
   isEmpty() {
