@@ -1,24 +1,42 @@
-// Should make a node class and use that for each data point instead of the array
+class Node {
+  constructor(data, next = null) {
+    this.data = data
+    this.next = next
+  }
+}
 
 class Queue {
-  constructor() {
-    this.data = []
+  constructor(first = null, last = null) {
+    this.first = first
+    this.last = last
   }
 
-  add(value) {
-    this.data.push(value)
+  add(data) {
+    const currNode = new Node(data)
+    if (this.last !== null) {
+      this.last.next = currNode
+    }
+    this.last = currNode
+    if (this.first === null) {
+      this.first = this.last
+    }
   }
 
   remove() {
-    return this.data.shift()
+    const currNode = this.first
+    const first = currNode.next
+    if (first === null) {
+      this.last = null
+    }
+    return currNode.data
   }
 
   peek() {
-    return this.data[0]
+    return this.first.data
   }
 
   isEmpty() {
-    if (this.peek() === undefined) {
+    if (this.peek() === null) {
       return true
     } else {
       return false

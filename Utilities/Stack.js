@@ -19,11 +19,11 @@ class Stack {
   pop() {
     const currNode = this.top
     this.top = currNode.next
-    return currNode
+    return currNode.data
   }
 
   peek() {
-    return this.top
+    return this.top.data
   }
 
   isEmpty() {
